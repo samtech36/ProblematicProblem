@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 
 namespace ProblematicProblem
+
 {
     class Program
 { 
@@ -13,7 +14,7 @@ namespace ProblematicProblem
     {
         Random rng = new Random();
 
-        Console.WriteLine("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
+        Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
         bool cont;
         var contResponse = Console.ReadLine().ToLower();
 
@@ -71,8 +72,8 @@ namespace ProblematicProblem
                 }
 
                 Console.WriteLine();
-                Console.WriteLine("Would you like to add more? yes/no: ");
-                addToList = bool.Parse(Console.ReadLine());
+                Console.Write("Would you like to add more? yes/no: ");
+                addToList = (Console.ReadLine().ToLower() == "yes") ? true : false;
             }
         }
 
@@ -114,8 +115,7 @@ namespace ProblematicProblem
 
             }
 
-            Console.Write(
-                $"Ah got it! {randomActivity}, your random activity is: {userName}! Is this ok or do you want to grab another activity? Keep/Redo: ");
+            Console.Write($"Ah got it! {randomActivity}, your random activity is: {userName}! Is this ok or do you want to grab another activity? Keep/Redo: ");
             Console.WriteLine();
             cont = (Console.ReadLine().ToLower() == "redo" ? true : false);
         } 
@@ -123,7 +123,6 @@ namespace ProblematicProblem
 }
     
 }
-
 
 
 
